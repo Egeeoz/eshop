@@ -13,29 +13,27 @@ interface navbarProps {
 const Navbar = ({ title, navItems }: navbarProps) => {
   const [openSubNav, setOpenSubNav] = useState<string | null>(null);
 
-  // const navCheckOpen = (item) => {
-  //   setOpenSubNav(openSubNav === item.name ? null : item.name)
-  // }
+  const handleNavState = (name: string) => {
+    setOpenSubNav(openSubNav === name ? null : name);
+  };
 
   return (
     <nav>
       <h1>{title}</h1>
       <ul>
         {navItems.map((item) => (
-          <li key={item.name}>
-            <button
-              onClick={() =>
-                setOpenSubNav(openSubNav === item.name ? null : item.name)
-              }
-            >
+          <li>
+            <button onClick={() => handleNavState(item.name)}>
               {item.name}
             </button>
-            {openSubNav === item.name && item.subnav && (
+            {openSubNav === item.name && (
               <ul>
                 {item.subnav.map((subItem) => (
-                  <li key={subItem}>
-                    <a href="">{subItem}</a>
-                  </li>
+                  <>
+                    <br />
+                    {/*This br adds extra margin between subnav buttons and nav buttons, fix this later  */}
+                    <button>{subItem}</button>
+                  </>
                 ))}
               </ul>
             )}
