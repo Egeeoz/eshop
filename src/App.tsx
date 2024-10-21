@@ -1,10 +1,17 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
+import Navbar from './components/navbar';
 
 function App() {
-  return <></>;
+  const navItems = [
+    { name: 'Mens', subnav: ['Hoodies', 'Socks'] },
+    { name: 'Womens', subnav: ['Hoodies', 'Socks'] },
+  ];
+
+  return (
+    <>
+      <Navbar title="Eshop" navItems={navItems} />
+    </>
+  );
 }
 
 export default App;
