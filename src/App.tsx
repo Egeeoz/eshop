@@ -1,6 +1,7 @@
 import './App.css';
 import Hero from './components/hero';
 import Navbar from './components/navbar';
+import Product from './components/products';
 
 function App() {
   const navItems = [
@@ -12,6 +13,9 @@ function App() {
     <>
       <Navbar title="Eshop" navItems={navItems} />
       <Hero />
+      <section>
+        <Product />
+      </section>
     </>
   );
 }
