@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import '../styling/navbar.css';
+import Button from './button';
 
 interface NavItem {
   name: string;
@@ -23,16 +25,16 @@ const Navbar = ({ title, navItems }: navbarProps) => {
       <ul>
         {navItems.map((item) => (
           <li>
-            <button onClick={() => handleNavState(item.name)}>
+            <Button onClick={() => handleNavState(item.name)}>
               {item.name}
-            </button>
+            </Button>
             {openSubNav === item.name && (
               <ul>
                 {item.subnav.map((subItem) => (
                   <>
                     <br />
                     {/*This br adds extra margin between subnav buttons and nav buttons, fix this later  */}
-                    <button>{subItem}</button>
+                    <Button children={subItem} />
                   </>
                 ))}
               </ul>
