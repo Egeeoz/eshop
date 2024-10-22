@@ -2,17 +2,52 @@ nav {
   width: 100%;
   height: 10vh;
   display: flex;
-  background-color: orange;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #003049;
+}
+
+nav h1 {
+  color: white;
 }
 
 ul {
-  width: 15rem;
+  width: 20rem;
   display: flex;
   justify-content: space-between;
 }
 
 li {
+  position: relative;
   list-style: none;
+}
+
+.subnav {
+  height: 11vh;
+  background-color: #669bbc;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 100%;
+  max-width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 10;
+}
+
+.subnav.active {
+  transform: translateX(-50%) scaleY(1);
+  opacity: 1;
+}
+
+.subnav button {
+  width: 7.5rem;
+  margin-top: 0.2rem;
 }

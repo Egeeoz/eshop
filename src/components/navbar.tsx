@@ -28,17 +28,16 @@ const Navbar = ({ title, navItems }: navbarProps) => {
             <Button onClick={() => handleNavState(item.name)}>
               {item.name}
             </Button>
-            {openSubNav === item.name && (
-              <ul>
-                {item.subnav.map((subItem) => (
-                  <>
-                    <br />
-                    {/*This br adds extra margin between subnav buttons and nav buttons, fix this later  */}
-                    <Button children={subItem} />
-                  </>
-                ))}
-              </ul>
-            )}
+
+            <ul
+              className={`subnav ${openSubNav === item.name ? 'active' : ''} `}
+            >
+              {item.subnav.map((subItem) => (
+                <>
+                  <Button children={subItem} />
+                </>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
