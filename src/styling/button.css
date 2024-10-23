@@ -1,15 +1,9 @@
 .button {
-  width: 9rem;
+  width: 8rem;
   background-color: white;
-  display: inline-block;
-  padding: 12px 24px;
-  border: 1px solid #4f4f4f;
-  border-radius: 4px;
-  transition: all 0.3s ease-in;
-  position: relative;
-  overflow: hidden;
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 1.5px solid black;
   font-size: 16px;
   cursor: pointer;
-  color: black;
-  z-index: 1;
 }

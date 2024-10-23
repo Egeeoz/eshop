@@ -28,16 +28,6 @@ const Navbar = ({ title, navItems }: navbarProps) => {
             <Button onClick={() => handleNavState(item.name)}>
               {item.name}
             </Button>
-
-            <ul
-              className={`subnav ${openSubNav === item.name ? 'active' : ''} `}
-            >
-              {item.subnav.map((subItem) => (
-                <>
-                  <Button children={subItem} />
-                </>
-              ))}
-            </ul>
           </li>
         ))}
       </ul>
