@@ -1,9 +1,45 @@
 .button {
+  position: relative;
   width: 8rem;
   background-color: white;
-  padding: 10px 20px;
-  border: none;
-  border-bottom: 1.5px solid black;
   font-size: 16px;
   cursor: pointer;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+/* Top left corner */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  transition: width 0.5s, height 0.5s;
+  box-sizing: border-box;
+}
+
+/* Bottom right corner */
+.button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transition: width 0.5s, height 0.5s;
+  box-sizing: border-box;
+}
+
+/* Hover animations */
+.button:hover::before,
+.button:hover::after {
+  width: 100%;
+  height: 100%;
 }

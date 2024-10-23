@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../styling/navbar.css';
 import Button from './button';
+import { MdOutlineShoppingCart } from 'react-icons/md';
 
 interface NavItem {
   name: string;
@@ -31,6 +32,7 @@ const Navbar = ({ title, navItems }: navbarProps) => {
           </li>
         ))}
       </ul>
+      <MdOutlineShoppingCart size={45} />
     </nav>
   );
 };
