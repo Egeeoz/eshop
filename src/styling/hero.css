@@ -1,8 +1,8 @@
 .hero-container {
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   background-image: url('../assets//heroImg.jpg');
-  background-position: 20% 80%;
+  background-position: 10% 90%;
   background-size: cover;
   background-repeat: no-repeat;
   border-bottom: 2px solid black;
@@ -12,6 +12,7 @@
   color: white;
   text-align: left;
   font-weight: 500;
-  padding: 7rem 0rem 0rem 4rem;
+  padding: 9rem 0rem 0rem 4rem;
   text-decoration-line: underline;
+  font-size: 32px;
 }

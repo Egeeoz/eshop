@@ -1,0 +1,34 @@
+.product-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 30%;
+  height: 40vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.product-image {
+  background-image: url('../assets/shoes.jpg');
+  width: 80%;
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.product-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product-size-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product-size-container button {
+  width: 15%;
+  height: 3.5vh;
+}

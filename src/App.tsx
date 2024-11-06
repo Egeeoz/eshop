@@ -14,8 +14,13 @@ function App() {
     <>
       <Navbar title="Eshop" navItems={navItems} />
       <Hero />
-      <section>
-        <Product />
+      <section className="items-container">
+        <h1 className="popular-products-title">Popular Products</h1>
+        <section className="items">
+          <Product />
+          <Product />
+          <Product />
+        </section>
       </section>
       <Footer />
     </>
