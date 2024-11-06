@@ -1,8 +1,9 @@
+import '../styling/hero.css';
+
 const Hero = () => {
   return (
-    <section>
-      <button>Shop for men</button>
-      <button>Shop for women</button>
+    <section className="hero-container">
+      <h2 className="hero-title">Find Your Shoes</h2>
     </section>
   );
 };
