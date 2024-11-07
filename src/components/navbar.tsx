@@ -2,37 +2,30 @@ import { useState } from 'react';
 import '../styling/navbar.css';
 import Button from './button';
 import { MdOutlineShoppingCart } from 'react-icons/md';
-
-interface NavItem {
-  name: string;
-  subnav: string[];
-}
+import Cart from './cart';
 
 interface navbarProps {
   title: string;
-  navItems: NavItem[];
 }
 
-const Navbar = ({ title, navItems }: navbarProps) => {
-  const [openSubNav, setOpenSubNav] = useState<string | null>(null);
+const Navbar = ({ title }: navbarProps) => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const handleNavState = (name: string) => {
-    setOpenSubNav(openSubNav === name ? null : name);
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
   };
 
   return (
     <nav>
       <h1>{title}</h1>
       <ul>
-        {navItems.map((item) => (
-          <li>
-            <Button onClick={() => handleNavState(item.name)}>
-              {item.name}
-            </Button>
-          </li>
-        ))}
+        <li>
+          <Button>Mens</Button>
+          <Button>Womens</Button>
+        </li>
       </ul>
-      <MdOutlineShoppingCart size={45} />
+      <MdOutlineShoppingCart size={45} onClick={toggleCart} />
+      {isCartOpen && <Cart onClose={toggleCart} />}
     </nav>
   );
 };

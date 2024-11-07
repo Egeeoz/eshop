@@ -5,14 +5,9 @@ import Navbar from './components/navbar';
 import Product from './components/products';
 
 function App() {
-  const navItems = [
-    { name: 'Mens', subnav: ['Hoodies', 'Socks'] },
-    { name: 'Womens', subnav: ['Hoodies', 'Socks'] },
-  ];
-
   return (
     <>
-      <Navbar title="Eshop" navItems={navItems} />
+      <Navbar title="Eshop" />
       <Hero />
       <section className="items-container">
         <h1 className="popular-products-title">Popular Products</h1>

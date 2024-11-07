@@ -9,11 +9,11 @@ nav {
 
 ul {
   width: 20rem;
-  display: flex;
-  justify-content: space-between;
 }
 
 li {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
 }
 
