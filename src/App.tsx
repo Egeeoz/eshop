@@ -3,22 +3,26 @@ import Footer from './components/footer';
 import Hero from './components/hero';
 import Navbar from './components/navbar';
 import Product from './components/products';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/home';
+import Mens from './pages/mens';
+import Womens from './pages/womens';
+import ProductPage from './pages/productPage';
 
 function App() {
   return (
-    <>
+    <section className="App">
       <Navbar title="Eshop" />
-      <Hero />
-      <section className="items-container">
-        <h1 className="popular-products-title">Popular Products</h1>
-        <section className="items">
-          <Product />
-          <Product />
-          <Product />
-        </section>
-      </section>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mens" element={<Mens />} />
+          <Route path="/womens" element={<Womens />} />
+          <Route path="/productpage" element={<ProductPage />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </section>
   );
 }
 

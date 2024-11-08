@@ -1,4 +1,4 @@
-import '../styling/product.css';
+import '../styling/components/product.css';
 
 const Product = () => {
   return (

@@ -13,15 +13,13 @@
   overflow-y: auto;
 }
 
-/* Header styling for cart title */
 .cart-container h1 {
   margin-bottom: 20px;
   font-size: 24px;
   color: #333;
 }
 
-/* Product container to hold cart items */
-.product-container {
+.cart-items {
   flex-grow: 1;
   padding: 10px 0;
   border-top: 1px solid #ddd;
@@ -29,7 +27,6 @@
   margin-bottom: 20px;
 }
 
-/* Close button styling */
 .cart-container button {
   align-self: flex-end;
   background-color: #f44336;

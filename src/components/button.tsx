@@ -1,4 +1,4 @@
-import '../styling/button.css';
+import '../styling/components/button.css';
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
