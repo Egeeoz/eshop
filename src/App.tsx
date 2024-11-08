@@ -1,8 +1,6 @@
 import './App.css';
 import Footer from './components/footer';
-import Hero from './components/hero';
 import Navbar from './components/navbar';
-import Product from './components/products';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import Mens from './pages/mens';
